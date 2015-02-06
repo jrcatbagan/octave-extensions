@@ -12,17 +12,15 @@
 #
 # Usage:
 #
-#	r2pd(real, complex)
+#	r2pd(rect_coordinate)
 #////////////////////////////////////////////////////////////////////////////////////////
 
-function r2pd(real, complex)
+function r2pd(rect_coordinate)
+	 realnum = real(rect_coordinate);
+	 imagnum = imag(rect_coordinate);
 	 magnitude = 0;
 	 angle = 0;
-	 magnitude = sqrt((real^2) + (complex^2));
-	 angle = atan2d(complex, real);
-	 printf("\n\tmagnitude: ");
-	 disp(magnitude);
-	 printf("\tangle: ");
-	 disp(angle);
-	 printf("\n");
+	 magnitude = sqrt((realnum^2) + (imagnum^2));
+	 angle = atan2d(imagnum, realnum);
+	 printf("\n\t%f /%f deg\n\n", magnitude, angle);
 endfunction

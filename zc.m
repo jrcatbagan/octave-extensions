@@ -17,9 +17,14 @@
 #	zc(frequency, capacitance)
 #////////////////////////////////////////////////////////////////////////////////////////
 
-function zc(frequency, capacitance)
+function capacitance = zc(frequency, capacitance)
 	 z = 1 / (j * 2 * pi * frequency * capacitance);
 	 printf("\n\tcapacitor impedance: ");
 	 disp(z);
 	 printf("\n");
+	 capacitance = z;
 endfunction
+
+
+
+

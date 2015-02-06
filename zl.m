@@ -17,9 +17,10 @@
 #	zl(frequency, inductance)
 #////////////////////////////////////////////////////////////////////////////////////////
 
-function zl(frequency, inductance)
+function impedance = zl(frequency, inductance)
 	 z = j * 2 * pi * frequency * inductance;
 	 printf("\n\tinductor impedance: ");
 	 disp(z);
 	 printf("\n");
+	 impedance = z;
 endfunction
